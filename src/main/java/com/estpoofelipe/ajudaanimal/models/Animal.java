@@ -2,26 +2,46 @@ package com.estpoofelipe.ajudaanimal.models;
 
 import java.util.Date;
 
+import com.estpoofelipe.ajudaanimal.enums.Especie;
+
 import jakarta.persistence.*;
 
 @Entity
 @Table(name = "animais")
 public class Animal {
 
+	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int id;
 	
 	private String nome;
+
 	private String raca;
-	private String especie;
+	
 	private int idade;
+	@Enumerated(EnumType.STRING)
+	private Especie especie;
 	private String nomeFoto;
 	
 	@Column(columnDefinition = "TEXT")
 	private String descricao;
 	private Date dtCad;
 
+	public Animal() {
+		
+	}
+	public Animal(int id, String nome, String raca, Especie especie, int idade, String nomeFoto, String descricao, Date dtCad) {
+		super();
+		this.id = id;
+		this.nome = nome;
+		this.raca = raca;
+		this.especie = especie;
+		this.idade = idade;
+		this.nomeFoto = nomeFoto;
+		this.descricao = descricao;
+		this.dtCad = dtCad;
+	}
 	
 	public int getId() {
 		return id;
@@ -41,10 +61,10 @@ public class Animal {
 	public void setRaca(String raca) {
 		this.raca = raca;
 	}
-	public String getEspecie() {
+	public Especie getEspecie() {
 		return especie;
 	}
-	public void setEspecie(String especie) {
+	public void setEspecie(Especie especie) {
 		this.especie = especie;
 	}
 	public int getIdade() {

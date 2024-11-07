@@ -43,9 +43,9 @@
 					
 					<div class="form-floating pb-3 mx-2">
 					  <select class="form-select" th:field="${animalDto.especie}" id="floatingSelect" aria-label="Selecione uma opção">
-					    <option value="Cachorro">Cachorro</option>
-					    <option value="Gato">Gato</option>
-					    <option value="Periquito">Periquito</option>
+					    <option value="CACHORRO">Cachorro</option>
+					    <option value="GATO">Gato</option>
+					    <option value="PERIQUITO">Periquito</option>
 					  </select>
 					  <label for="floatingSelect">Espécie</label>
 					  <p th:if="${#fields.hasErrors('especie')}" th:errorclass="text-danger" 

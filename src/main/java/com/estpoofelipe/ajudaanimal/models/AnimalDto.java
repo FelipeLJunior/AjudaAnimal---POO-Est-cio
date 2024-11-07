@@ -2,6 +2,8 @@ package com.estpoofelipe.ajudaanimal.models;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.estpoofelipe.ajudaanimal.enums.Especie;
+
 import jakarta.validation.constraints.*;
 
 public class AnimalDto {
@@ -11,8 +13,7 @@ public class AnimalDto {
 	@NotEmpty(message = "A raça do animal precisa ser informada!")
 	private String raca;
 	
-	@NotEmpty(message = "A espécie do animal precisa ser informada!")
-	private String especie;
+	private Especie especie;
 	
 	@Min(0)
 	private int idade;
@@ -39,11 +40,11 @@ public class AnimalDto {
 		this.raca = raca;
 	}
 
-	public String getEspecie() {
+	public Especie getEspecie() {
 		return especie;
 	}
 
-	public void setEspecie(String especie) {
+	public void setEspecie(Especie especie) {
 		this.especie = especie;
 	}
 

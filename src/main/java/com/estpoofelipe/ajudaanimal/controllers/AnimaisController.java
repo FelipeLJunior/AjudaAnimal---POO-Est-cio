@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.estpoofelipe.ajudaanimal.enums.Especie;
 import com.estpoofelipe.ajudaanimal.models.Animal;
 import com.estpoofelipe.ajudaanimal.models.AnimalDto;
 import com.estpoofelipe.ajudaanimal.services.AnimaisRepository;
